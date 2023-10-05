@@ -1,38 +1,36 @@
 #include<stdio.h>
-int main ()
+int a,b,c,t,per;
+char d;
+void dosum2()
 {
-	float a,b,c,p;
-	
+	printf("\t \n total=%d",t);
+	printf("\t \n per  =%d",per);
+	printf("\t \n grade=%c",d);	
+}
+void dosum1()
+{
+	t=a+b+c;
+	per=t/3;
+	if(a<33||b<33||c<33)
+	d='F';
+	else if(per>80 && per>90)
+	d='B';
+	else if(per>90)
+	d='A';
+	dosum2();
+}
+void dosum()
+{	
 	printf("maths=");
-	scanf("%f",&a);
-	printf("hindi=");
-	scanf("%f",&b);
-	printf("eng=");
-	scanf("%f",&c);
-	printf("total=%f",a+b+c);
-	p=(a+b+c)/3;
-	printf("\nper=%f",p);
-	if(p>75)
-	{
-		printf("\n a=gred");
-	}
-	else if(p>60&&p<=75)
-	{
-		printf("\n b=gread");
-	}
-	else if(p>45&&p<=60)
-	{
-		printf("\n c=gread");
-	}
-	else if(p>35&&p<=45)
-	{
-		printf("\n d=gread");
-	}
-	else if(p<35)
-	{
-		printf(" fail");
-	}
+	scanf("%d",&a);
+	printf("chemistry=");
+	scanf("%d",&b);
+	printf("physics=");
+	scanf("%d",&c);
+	dosum1();
+}
+int main()
+{
+	dosum();
 	return 0;
-
-
 }
