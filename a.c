@@ -13,3 +13,4 @@ void main()
 		printf("\n%d\t%u",*(p+i),(p+i));
 	}
 }
+//..
